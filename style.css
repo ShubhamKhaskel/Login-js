@@ -1,0 +1,23 @@
+.con
+{
+    text-align: center;
+    background-color: rgb(210, 182, 182);
+    height: 205px;
+    width: 205px;
+    margin: auto;
+}
+.con:hover
+{
+    background-color: rgb(235, 125, 125);
+}
+.ball
+{   height: 500px;
+    width: 500px;
+    transition: transform 8s ease-in;
+}
+.ball:hover{
+    
+        transform:rotate(360deg) ;
+   
+}
+
