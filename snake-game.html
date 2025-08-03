@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game - Interactive Food Adventure</title>
+    <link rel="stylesheet" href="snake-game.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1 class="game-title">🐍 Snake Adventure</h1>
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="score-label">Score:</span>
+                    <span id="score" class="score-value">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">High Score:</span>
+                    <span id="highScore" class="score-value">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">Level:</span>
+                    <span id="level" class="score-value">1</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-area">
+            <canvas id="gameCanvas" width="600" height="400"></canvas>
+            
+            <div class="game-overlay" id="gameOverlay">
+                <div class="overlay-content">
+                    <h2 id="overlayTitle">Snake Game</h2>
+                    <p id="overlayMessage">Use arrow keys or WASD to move the snake. Eat food to grow and score points!</p>
+                    <button id="startButton" class="game-button">Start Game</button>
+                    <button id="pauseButton" class="game-button" style="display: none;">Pause</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="control-section">
+                <h3>Controls</h3>
+                <div class="control-grid">
+                    <div class="control-item">
+                        <span class="control-key">↑</span>
+                        <span class="control-desc">Move Up</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">↓</span>
+                        <span class="control-desc">Move Down</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">←</span>
+                        <span class="control-desc">Move Left</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">→</span>
+                        <span class="control-desc">Move Right</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">WASD</span>
+                        <span class="control-desc">Alternative</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="control-key">SPACE</span>
+                        <span class="control-desc">Pause</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-info">
+                <h3>Food Types</h3>
+                <div class="food-types">
+                    <div class="food-type">
+                        <div class="food-icon regular">🍎</div>
+                        <span>Regular (+1)</span>
+                    </div>
+                    <div class="food-type">
+                        <div class="food-icon bonus">🍊</div>
+                        <span>Bonus (+3)</span>
+                    </div>
+                    <div class="food-type">
+                        <div class="food-icon speed">⚡</div>
+                        <span>Speed Boost</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="snake-game.js"></script>
+</body>
+</html>
